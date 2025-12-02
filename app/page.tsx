@@ -39,43 +39,51 @@ export default function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h1
-        className="text-5xl font-bold tracking-widest mb-10 text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        {displayedText}
-        <span className="animate-pulse">|</span>
-      </motion.h1>
-      <motion.div
-        className="w-full max-w-xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-      >
-        <TarotInput />
-      </motion.div>
-      <motion.div
-        className="flex gap-12 mt-14 flex-wrap justify-center"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.2 } },
-        }}
-      ></motion.div>
-      {videoRefs.map((ref, i) => (
+      <div className="relative z-10 flex flex-col items-center mt-16 px-4">
+        <motion.h1
+          className="text-5xl font-bold tracking-widest mb-10 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {displayedText}
+          <span className="animate-pulse">|</span>
+        </motion.h1>
+
         <motion.div
-          key={i}
+          className="w-full max-w-xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
+          <TarotInput />
+        </motion.div>
+
+        <motion.div
+          className="flex gap-12 mt-14 flex-wrap justify-center"
+          initial="hidden"
+          animate="visible"
           variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
           }}
         >
-          <VideoCard videoRef={ref} src={`main-page-vids/tarot-${i + 1}.mp4`} />
+          {videoRefs.map((ref, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+              }}
+            >
+              <VideoCard
+                videoRef={ref}
+                src={`main-page-vids/tarot-${i + 1}.mp4`}
+              />
+            </motion.div>
+          ))}
         </motion.div>
-      ))}
+      </div>
     </motion.div>
   );
 }
