@@ -48,6 +48,14 @@ export default function HomePage() {
         {displayedText}
         <span className="animate-pulse">|</span>
       </motion.h1>
+      <motion.div
+        className="w-full max-w-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1 }}
+      >
+        <TarotInput />
+      </motion.div>
     </motion.div>
   );
 }
