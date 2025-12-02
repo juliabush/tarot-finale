@@ -65,6 +65,17 @@ export default function HomePage() {
           visible: { transition: { staggerChildren: 0.2 } },
         }}
       ></motion.div>
+      {videoRefs.map((ref, i) => (
+        <motion.div
+          key={i}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+          }}
+        >
+          <VideoCard videoRef={ref} src={`main-page-vids/tarot-${i + 1}.mp4`} />
+        </motion.div>
+      ))}
     </motion.div>
   );
 }
