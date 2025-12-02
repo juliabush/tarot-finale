@@ -32,5 +32,12 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
-  return <div></div>;
+  return (
+    <motion.div
+      className="relative w-full min-h-screen overflow-y-auto pb-40"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    ></motion.div>
+  );
 }
