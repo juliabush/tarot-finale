@@ -6,5 +6,9 @@ interface VideoCradProps {
 }
 
 export default function VideoCard({ src, videRef }: VideoCardProps) {
-  return <div className="flex flex-col items-center"></div>;
+  return (
+    <div className="flex flex-col items-center">
+      <div className="w-[300px] h-[500px] rounded-xl overflow-hidden shadow-xl border-4 border-blue-300"></div>
+    </div>
+  );
 }
