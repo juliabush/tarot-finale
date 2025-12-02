@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @import "@fontsouce/poppins";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --gradient-hue: egba(134, 31, 182, 0.15);
+}
