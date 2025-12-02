@@ -56,6 +56,15 @@ export default function HomePage() {
       >
         <TarotInput />
       </motion.div>
+      <motion.div
+        className="flex gap-12 mt-14 flex-wrap justify-center"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.2 } },
+        }}
+      ></motion.div>
     </motion.div>
   );
 }
