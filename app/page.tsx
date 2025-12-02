@@ -6,5 +6,11 @@ import TarotInput from "@/components/tarot_input";
 import VideoCard from "@/components/video_card";
 
 export default function HomePage() {
+  const videoRefs = [
+    useRef<HTMLVideoElement>(null),
+    useRef<HTMLVideoElement>(null),
+    useRef<HTMLVideoElement>(null),
+  ];
+
   return <div></div>;
 }
