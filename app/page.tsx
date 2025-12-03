@@ -34,12 +34,12 @@ export default function HomePage() {
 
   return (
     <motion.div
-      className="relative w-full min-h-screen overflow-y-auto pb-40"
+      className="relative w-full min-h-screen overflow-y-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="relative z-10 flex flex-col items-center mt-16 px-4">
+      <div className="relative z-10 flex flex-col items-center mt-24 px-4">
         <motion.h1
           className="text-5xl font-bold tracking-widest mb-10 text-center"
           initial={{ opacity: 0, y: -20 }}
