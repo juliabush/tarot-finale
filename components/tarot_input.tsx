@@ -39,3 +39,26 @@ async function handleAsk() {
     question.trim().endsWith("?") ? "" : "?"
   } 
 Tarot cards drawn: ${cardNames}. Include these cards in your answer.`;
+
+try {
+      const res = await fetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: prompt }),
+      });
+
+      if (!res.body) throw new Error("No response body.");
+
+      const queue: string[] = [];
+      let fullText = "";
+      let animationActive = true;
+
+      async function runTypewriter() {
+        while (animationActive) {
+          if (queue.length > 0) {
+            const nextChar = queue.shift()!;
+            setDisplayedText((prev) => prev + nextChar);
+          }
+          await new Promise((r) => setTimeout(r, 0));
+        }
+      }
