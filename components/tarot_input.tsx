@@ -6,3 +6,8 @@ import TarotCardDisplay from "./tarot_card_display";
 import ResponseModal from "./response_modal";
 import { pickRandomCards } from "../lib/tarot_utils";
 import { typeWriterAppend } from "../lib/typewriter";
+
+export interface TarotCard {
+  name: string;
+  url: string;
+}
