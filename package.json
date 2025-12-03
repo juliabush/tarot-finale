@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.7",
     "framer-motion": "^12.23.25",
     "next": "16.0.6",
     "openai": "^6.9.1",
