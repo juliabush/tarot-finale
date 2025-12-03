@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Container } from "@/components/container";
+import { Container } from "../components/container";
 
 export const metadata = {
   title: "Ask Tarot Anything",
