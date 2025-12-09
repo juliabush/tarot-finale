@@ -66,7 +66,6 @@ export default function HomePage() {
           animate="visible"
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.2 } },
           }}
         >
           {videoRefs.map((ref, i) => (
