@@ -39,6 +39,7 @@ export default function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      {/* Main page title */}
       <div className="relative z-10 flex flex-col items-center mt-24 px-4">
         <motion.h1
           className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest mb-10 text-center"
@@ -49,7 +50,7 @@ export default function HomePage() {
           {displayedText}
           <span className="animate-pulse">|</span>
         </motion.h1>
-
+        {/*End of the main page title */}
         <motion.div
           className="w-full max-w-xl"
           initial={{ opacity: 0 }}
