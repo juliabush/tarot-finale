@@ -41,7 +41,7 @@ export default function HomePage() {
     >
       <div className="relative z-10 flex flex-col items-center mt-24 px-4">
         <motion.h1
-          className="text-5xl font-bold tracking-widest mb-10 text-center"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest mb-10 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
