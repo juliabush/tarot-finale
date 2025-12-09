@@ -60,7 +60,7 @@ export default function HomePage() {
         </motion.div>
 
         <motion.div
-          className="flex gap-12 mt-14 flex-wrap justify-center"
+          className="flex gap-6 md:gap-12 mt-14 flex-wrap justify-center"
           initial="hidden"
           animate="visible"
           variants={{
