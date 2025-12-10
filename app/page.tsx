@@ -40,9 +40,9 @@ export default function HomePage() {
       transition={{ duration: 1 }}
     >
       {/* Main page title */}
-      <div className="relative z-10 flex flex-col items-center mt-6 md:mt-24 px-4">
+      <div className="relative z-10 flex flex-col items-center mt-4 md:mt-24 px-4">
         <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest mb-10 text-center"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest mb-6 md:mb-10 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -61,7 +61,7 @@ export default function HomePage() {
         </motion.div>
 
         <motion.div
-          className="flex gap-6 md:gap-12 mt-14 flex-wrap justify-center"
+          className="flex gap-6 md:gap-12 mt-8 md:mt-14 flex-wrap justify-center"
           initial="hidden"
           animate="visible"
           variants={{
